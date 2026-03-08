@@ -3,7 +3,7 @@ resource "vultr_ssh_key" "enre" {
   ssh_key = "YOURPUBLICSSHKEY"
 }
 
-resource "vultr_instance" "warden_south_us" {
+resource "vultr_instance" "warden_south_prod1" {
     hostname = "TEMPLATENAME"
     plan = "vc2-1c-1gb"
     region = "atl"
