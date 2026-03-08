@@ -7,10 +7,10 @@ skillo() {
 }
 
 if [ "$CMDZ" == "start" ]; then  
-  pgrep $PROCNM || export SERVERS=127.0.0.1:3443 && cd /root && /root/kiaproxy > /var/log/kiaproxy1.log 2>&1 &
+  pgrep $PROCNM || export SERVERS=127.0.0.1:3443 && cd /root && /root/kiaproxy1 > /var/log/kiaproxy1.log 2>&1 &
 fi
 if [ "$CMDZ" == "restart" ]; then
-  skillo && export SERVERS=127.0.0.1:3443 && cd /root && /root/kiaproxy > /var/log/kiaproxy1.log 2>&1 &
+  skillo && export SERVERS=127.0.0.1:3443 && cd /root && /root/kiaproxy1 > /var/log/kiaproxy1.log 2>&1 &
 fi
 if [ "$CMDZ" == "stop" ]; then
   skillo
