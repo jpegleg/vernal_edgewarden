@@ -2,7 +2,7 @@
 
 # Vernal Edgewarden
 
-Alpine + Rust microservices/monoliths/apps + Javascript/HTML/CSS
+Alpine + Rust + Javascript/HTML/CSS
 
 This build is a minimal build focused on performance, simplicity, and low resource consumption.
 
