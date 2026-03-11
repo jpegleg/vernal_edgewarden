@@ -2,6 +2,8 @@
 CMDZ="$1"
 PROCNM="kiaproxy2"
 
+export LISTENER=127.0.0.1:4003
+
 skillo() {
   pkill $PROCNM && pgrep $PROCNM && pkill -9 $PROCNM
 }
