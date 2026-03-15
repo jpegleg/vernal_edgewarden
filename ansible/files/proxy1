@@ -3,16 +3,21 @@ CMDZ="$1"
 PROCNM="kiaproxy1"
 
 export LISTENER=127.0.0.1:4443
+export SERVERS=127.0.0.1:3443
 
 skillo() {
   pkill $PROCNM && pgrep $PROCNM && pkill -9 $PROCNM
 }
 
-if [ "$CMDZ" == "start" ]; then  
-  pgrep $PROCNM || export SERVERS=127.0.0.1:3443 && cd /root && /root/kiaproxy1 > /var/log/kiaproxy1.log 2>&1 &
+if [ "$CMDZ" == "start" ]; then
+  pgrep $PROCNM || ed /root && /root/kiaproxy1 > /dev/null 2>&1 &
+  # use this instead for JSON event output
+  #pgrep $PROCNM || cd /root && /root/kiaproxy1 > /var/log/kiaproxy1.log 2>&1 &
 fi
 if [ "$CMDZ" == "restart" ]; then
-  skillo && export SERVERS=127.0.0.1:3443 && cd /root && /root/kiaproxy1 > /var/log/kiaproxy1.log 2>&1 &
+  skillo && cd /root && /root/kiaproxy1 > /dev/null 2>&1 &
+  # use this instead for JSON event output
+  #skillo && cd /root && /root/kiaproxy1 > /var/log/kiaproxy1.log 2>&1 &
 fi
 if [ "$CMDZ" == "stop" ]; then
   skillo
