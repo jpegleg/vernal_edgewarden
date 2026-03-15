@@ -11,12 +11,12 @@ skillo() {
 
 if [ "$CMDZ" == "start" ]; then
   pgrep $PROCNM || ed /root && /root/kiaproxy1 > /dev/null 2>&1 &
-  # use this instead for JSON event output
+  # use this instead for log event output
   #pgrep $PROCNM || cd /root && /root/kiaproxy1 > /var/log/kiaproxy1.log 2>&1 &
 fi
 if [ "$CMDZ" == "restart" ]; then
   skillo && cd /root && /root/kiaproxy1 > /dev/null 2>&1 &
-  # use this instead for JSON event output
+  # use this instead for log event output
   #skillo && cd /root && /root/kiaproxy1 > /var/log/kiaproxy1.log 2>&1 &
 fi
 if [ "$CMDZ" == "stop" ]; then
