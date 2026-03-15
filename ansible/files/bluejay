@@ -9,13 +9,13 @@ skillo() {
 if [ "$CMDZ" == "start" ]; then
         pgrep $PROCNM || cd /home/crab/ &&
         export RUN_ID="$(cat /dev/random | head -n2 | base64 | tr -d '\n' | cut -c 1-12)" &&
-        /home/crab/$PROCNM > /home/crab/logs/web.log 2>&1 &
+        /home/crab/$PROCNM > /dev/null 2>&1 &
 fi
 if [ "$CMDZ" == "restart" ]; then
   skillo &&
         pgrep $PROCNM || cd /home/crab/ &&
         export RUN_ID="$(cat /dev/random | head -n2 | base64 | tr -d '\n' | cut -c 1-12)" &&
-        /home/crab/$PROCNM > /home/crab/logs/web.log 2>&1 &
+        /home/crab/$PROCNM > /dev/null 2>&1 &
 fi
 if [ "$CMDZ" == "stop" ]; then
   skillo
