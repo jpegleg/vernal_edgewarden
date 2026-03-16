@@ -19,12 +19,10 @@ new_init() {
   cp /root/config.toml /opt/kiagateway/etc/config.toml
   cp /root/kigateway /opt/kiagateway/bin/keygateway
   cp /root/kiaproxy /root/kiaproxy1
-  cp /root/kiaproxy /root/kiaproxy2
-  cp /root/bluejay /usr/sbin/bluejay
-  cp /root/gate /usr/sbin/gate
-  cp /root/proxy1 /usr/sbin/proxy1
-  cp /root/proxy2 /usr/sbin/proxy2
-  cp /root/bluejay /usr/sbin/bluejay
+  cp /root/gate /etc/init.d/gate
+  cp /root/proxy1 /etc/init.d/proxy1
+  cp /root/redirectrix /etc/init.d/redirectrix
+  cp /root/bluejay /etc/init.d/bluejay
 }
 
 ls /root/._ash_gen_.lock || new_init
