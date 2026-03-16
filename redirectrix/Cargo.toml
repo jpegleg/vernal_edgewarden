@@ -1,0 +1,19 @@
+[package]
+name = "redirectrix"
+version = "0.1.0"
+edition = "2024"
+authors = ["Keegan Bowen <carefuldata@protonmail.com>"]
+license = "MIT"
+description = "a very small and fast HTTP to HTTPS redirection service"
+homepage = "https://carefuldata.com"
+repository = "https://github.com/jpegleg/vernal_edgewarden"
+readme = "README.md"
+keywords = ["http", "redirect", "redirection", "http-microservice"]
+categories = ["network-programming", "web-programming::http-server"]
+
+[dependencies]
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
