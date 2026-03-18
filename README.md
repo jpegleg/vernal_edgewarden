@@ -8,12 +8,12 @@ This build is a minimal build focused on performance, simplicity, and low resour
 
 It deploy s the kiastack with [kiabluejay](https://github.com/jpegleg/kiabluejay) behind [kiaproxy](https://github.com/jpegleg/kiaproxy) and [kiagateway](https://github.com/jpegleg/kiagateway).
 
-The new version also includes `redirectrix` to simplify the HTTP listener since all it is used for is redirecting to HTTPS.
+The new version also includes `redirectrix2` to simplify the HTTP listener since all it is used for is redirecting to HTTPS.
 
 ```
 ( internet ingress ) ---------------------
                            |             |
-                   ( kiagateway ) ( redirectrix ) 
+                   ( kiagateway ) ( redirectrix2 ) 
                            |      
                      (kiaproxy) 
                            |
