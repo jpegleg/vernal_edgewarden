@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 CMDZ="$1"
-PROCNM="kiagateway"
-PROCNMCMD="/opt/kiagateway/bin/kiagateway /opt/kiagateway/etc/config.toml"
+PROCNM="kiagateway_https"
+PROCNMCMD="/opt/kiagateway/bin/kiagateway_https /opt/kiagateway/etc/config.toml"
 
 skillo() {
   pkill $PROCNM || pgrep $PROCNM && pkill -9 $PROCNM
