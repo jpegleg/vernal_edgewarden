@@ -17,8 +17,7 @@ new_init() {
   chown -R crab:crab /opt/local/
   chown -R crab:crab /var/www/html/
   cp /root/config.toml /opt/kiagateway/etc/config.toml
-  cp /root/kigateway /opt/kiagateway/bin/keygateway
-  cp /root/kiaproxy /root/kiaproxy1
+  cp /root/kigateway_https /opt/kiagateway/bin/keygateway_https
   cp /root/gate /etc/init.d/gate
   cp /root/proxy1 /etc/init.d/proxy1
   cp /root/redirectrix /etc/init.d/redirectrix
