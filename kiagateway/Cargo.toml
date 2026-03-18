@@ -1,5 +1,5 @@
 [package]
-name = "kiagateway"
+name = "kiagateway_https"
 version = "0.1.1"
 edition = "2024"
 authors = ["Keegan Bowen <carefuldata@protonmail.com>"]
